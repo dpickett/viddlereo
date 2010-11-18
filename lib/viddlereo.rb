@@ -1,4 +1,6 @@
 require 'configatron'
+require 'happymapper'
+require 'rest-client'
 
 module Viddlereo
   def self.key=(key)
@@ -25,3 +27,6 @@ module Viddlereo
     configatron.viddlereo
   end
 end
+
+require 'viddlereo/resource'
+require 'viddlereo/echo'

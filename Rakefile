@@ -54,3 +54,22 @@ task :default => :spec
 
 require 'yard'
 YARD::Rake::YardocTask.new
+
+namespace :vcr do
+  desc "uses erb to replace Viddler key for multi developer usage"
+  task :obscure_key do
+    require File.dirname(__FILE__) + "/lib/viddlereo"
+    [
+      "/spec/cassettes/**/*.yml",
+      "/features/cassettes/**/*.yml"
+    ].each do |glob|
+      Viddlereo.configuration.configure_from_yaml(File.dirname(__FILE__) + "/spec/viddlereo.yml")
+      Dir.glob(File.dirname(__FILE__) + glob).each do |f|
+        contents = File.read(f)
+        File.open(f, "w") do |j|
+          j << contents.gsub(CGI.escape(Viddlereo.key), "<%= key %>")
+        end
+      end
+    end
+  end
+end
