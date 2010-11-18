@@ -10,7 +10,7 @@ describe "a viddlereo resource" do
     end
 
     it "contains the resource name" do
-      subject.uri.should =~ /echo/
+      subject.uri.should =~ /api/
     end
 
     it "optionally contains a method" do

@@ -56,8 +56,8 @@ require 'yard'
 YARD::Rake::YardocTask.new
 
 namespace :vcr do
-  desc "uses erb to replace Viddler key for multi developer usage"
-  task :obscure_key do
+  desc "uses erb to replace Viddler key and password for multi developer usage"
+  task :obscure_credentials do
     require File.dirname(__FILE__) + "/lib/viddlereo"
     [
       "/spec/cassettes/**/*.yml",
@@ -67,7 +67,7 @@ namespace :vcr do
       Dir.glob(File.dirname(__FILE__) + glob).each do |f|
         contents = File.read(f)
         File.open(f, "w") do |j|
-          j << contents.gsub(CGI.escape(Viddlereo.key), "<%= key %>")
+          j << contents.gsub(CGI.escape(Viddlereo.key), "<%= key %>").gsub(CGI.escape(Viddlereo.password), "<%= password %>").gsub(CGI.escape(Viddlereo.user), "<%= user %>")
         end
       end
     end

@@ -21,7 +21,7 @@ module Viddlereo
     end
 
     def self.uri(method_name = nil)
-      BASE_URI + "viddler.api." + (@resource_name || name.downcase.split("::").last) +
+      BASE_URI + "viddler." + (@resource_name || name.downcase.split("::").last) +
         (!method_name.nil? ? ".#{method_name}" : "") + ".xml"
     end
 

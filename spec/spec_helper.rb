@@ -14,7 +14,11 @@ Viddlereo.configuration.configure_from_yaml(File.dirname(__FILE__) + "/viddlereo
 VCR.config do |c|
   c.cassette_library_dir = 'spec/cassettes'
   c.stub_with :webmock
-  c.default_cassette_options = { :record => :new_episodes, :erb => {:key => Viddlereo.key} }
+  c.default_cassette_options = { :record => :new_episodes, :erb => {
+    :key      => Viddlereo.key,
+    :password => Viddlereo.password,
+    :user     => Viddlereo.user
+  } }
 end
 
 
