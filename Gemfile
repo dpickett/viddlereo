@@ -5,6 +5,11 @@ source "http://rubygems.org"
 
 # Add dependencies to develop your gem here.
 # Include everything needed to run rake, tests, features, etc.
+
+gem 'rest-client'
+gem 'happymapper'
+gem 'configatron'
+
 group :development do
   gem "rspec", "~> 2.1.0"
   gem "yard", "~> 0.6.0"
