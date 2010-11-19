@@ -23,6 +23,15 @@ describe "Viddlereo" do
   end
 
   context "before retrieving a session" do
+    before do
+      @old_session_id = subject.configuration.session_id
+      subject.configuration.session_id = nil
+    end
+
+    after do
+      subject.configuration.session_id = @old_session_id
+    end
+
     it "does not have a session" do
       subject.has_session?.should be_false
     end

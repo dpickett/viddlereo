@@ -15,7 +15,7 @@
       message: OK
     headers: 
       x-viddler-node: 
-      - viddler_k
+      - viddler_j
       connection: 
       - keep-alive
       content-type: 
@@ -23,11 +23,11 @@
       server: 
       - nginx/0.6.32
       date: 
-      - Thu, 18 Nov 2010 21:51:20 GMT
+      - Fri, 19 Nov 2010 00:04:41 GMT
       content-encoding: 
       - gzip
       set-cookie: 
-      - JSESSIONID=E46792A7503D1B4BC8D24DB69166AD1B.viddler_k; Domain=.viddler.com; Path=/
+      - JSESSIONID=06F86C185203F0C61178B410E3ACE3E4.viddler_j; Domain=.viddler.com; Path=/
       vary: 
       - Accept-Encoding
       transfer-encoding: 

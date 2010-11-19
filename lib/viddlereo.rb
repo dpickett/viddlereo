@@ -31,6 +31,10 @@ module Viddlereo
     configuration.session_id = Viddlereo::Session.auth.session_id
   end
 
+  def self.forget_session
+    configuration.session_id = nil
+  end
+
   def self.session_id
     configuration.session_id
   end
@@ -44,6 +48,10 @@ module Viddlereo
   end
 end
 
+require 'viddlereo/param'
 require 'viddlereo/resource'
+
 require 'viddlereo/echo'
 require 'viddlereo/session'
+require 'viddlereo/video'
+require 'viddlereo/playlist'

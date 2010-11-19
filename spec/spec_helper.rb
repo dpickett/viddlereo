@@ -23,5 +23,5 @@ end
 
 
 RSpec.configure do |config|
-  
+  config.extend VCR::RSpec::Macros  
 end
