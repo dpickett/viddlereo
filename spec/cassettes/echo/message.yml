@@ -1,0 +1,40 @@
+--- 
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: http://api.viddler.com:80/api/v2/viddler.api.echo.xml?key=<%= key %>&message=HELLO
+    body: 
+    headers: 
+      accept: 
+      - "*/*; q=0.5, application/xml"
+      accept-encoding: 
+      - gzip, deflate
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      x-viddler-node: 
+      - viddler_j
+      connection: 
+      - keep-alive
+      content-type: 
+      - text/xml;charset=UTF-8
+      server: 
+      - nginx/0.6.32
+      date: 
+      - Fri, 19 Nov 2010 00:04:41 GMT
+      content-encoding: 
+      - gzip
+      set-cookie: 
+      - JSESSIONID=06F86C185203F0C61178B410E3ACE3E4.viddler_j; Domain=.viddler.com; Path=/
+      vary: 
+      - Accept-Encoding
+      transfer-encoding: 
+      - chunked
+    body: !binary |
+      H4sIAAAAAAAAA7Kxr8jNUShLLSrOzM+zVTLUM1BSSM1Lzk/JzEu3VQoNcdO1
+      ULK347JJTc7Ijy9KLS7IzytOtbPJTS0uTkxPtfNw9fHxt9GHcW30UdUBAAAA
+      //8DAF7v1BdeAAAA
+
+    http_version: "1.1"
