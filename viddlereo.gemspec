@@ -45,7 +45,8 @@ Gem::Specification.new do |s|
     "spec/viddlereo/resource_spec.rb",
     "spec/viddlereo/session_spec.rb",
     "spec/viddlereo/video_spec.rb",
-    "spec/viddlereo_spec.rb"
+    "spec/viddlereo_spec.rb",
+    "viddlereo.gemspec"
   ]
   s.homepage = %q{http://github.com/dpickett/viddlereo}
   s.licenses = ["MIT"]
