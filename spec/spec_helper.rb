@@ -24,4 +24,9 @@ end
 
 RSpec.configure do |config|
   config.extend VCR::RSpec::Macros  
+
+  #forget the session so each test is independent
+  config.before(:each) do
+    Viddlereo.forget_session
+  end
 end

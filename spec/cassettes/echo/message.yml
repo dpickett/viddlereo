@@ -23,11 +23,11 @@
       server: 
       - nginx/0.6.32
       date: 
-      - Fri, 19 Nov 2010 00:04:41 GMT
+      - Sat, 20 Nov 2010 22:19:17 GMT
       content-encoding: 
       - gzip
       set-cookie: 
-      - JSESSIONID=06F86C185203F0C61178B410E3ACE3E4.viddler_j; Domain=.viddler.com; Path=/
+      - JSESSIONID=8777C178F8D1A5C837B24093A5265BC3.viddler_j; Domain=.viddler.com; Path=/
       vary: 
       - Accept-Encoding
       transfer-encoding: 

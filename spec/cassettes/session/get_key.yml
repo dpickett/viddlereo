@@ -2,7 +2,7 @@
 - !ruby/struct:VCR::HTTPInteraction 
   request: !ruby/struct:VCR::Request 
     method: :get
-    uri: http://api.viddler.com:80/api/v2/viddler.users.auth.xml?get_record_token=0&key=<%= key %>&password=<%= password %>&sessionid=256321512c617068c6444b4c45494d414e290&user=<%= user %>
+    uri: http://api.viddler.com:80/api/v2/viddler.users.auth.xml?get_record_token=0&key=<%= key %>&password=<%= password %>&user=<%= user %>
     body: 
     headers: 
       accept: 
@@ -15,7 +15,7 @@
       message: OK
     headers: 
       x-viddler-node: 
-      - viddler_k
+      - viddler_i
       connection: 
       - keep-alive
       content-type: 
@@ -23,18 +23,18 @@
       server: 
       - nginx/0.6.32
       date: 
-      - Fri, 19 Nov 2010 00:04:41 GMT
+      - Sat, 20 Nov 2010 22:19:19 GMT
       content-encoding: 
       - gzip
       set-cookie: 
-      - JSESSIONID=34843CB6910379C48A5BAB7687F3545D.viddler_k; Domain=.viddler.com; Path=/
+      - JSESSIONID=84BDB15FC9D545BBF96EABDE530A3FF8.viddler_i; Domain=.viddler.com; Path=/
       vary: 
       - Accept-Encoding
       transfer-encoding: 
       - chunked
     body: !binary |
       H4sIAAAAAAAAA7Kxr8jNUShLLSrOzM+zVTLUM1BSSM1Lzk/JzEu3VQoNcdO1
-      ULK347JJLC3JsLMpTi0GqctMsbNIMTY2MjA0SjYzNDcyTzY0NDExSTJJNjE1
-      sTRJMTE0STU0s7DRR6i30QebAAAAAP//AwBDccaBbwAAAA==
+      ULK347JJLC3JsLMpTi0GqctMsTM2NjYyNTc0SjZLMk1NSjY2MDExSTJJNjE1
+      sTRJMTE0STU2T7LRR6i30QebAAAAAP//AwCuGoc4bwAAAA==
 
     http_version: "1.1"
