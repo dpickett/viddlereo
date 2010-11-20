@@ -5,7 +5,7 @@
 
 Gem::Specification.new do |s|
   s.name = %q{viddlereo}
-  s.version = "0.1.0"
+  s.version = "0.1.1"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Dan Pickett"]
@@ -36,6 +36,7 @@ Gem::Specification.new do |s|
     "lib/viddlereo/video.rb",
     "spec/cassettes/Viddlereo_Playlist/creating.yml",
     "spec/cassettes/Viddlereo_Playlist/fetching.yml",
+    "spec/cassettes/Viddlereo_Playlist/fetching_by_user.yml",
     "spec/cassettes/echo/message.yml",
     "spec/cassettes/session/get_key.yml",
     "spec/spec_helper.rb",
