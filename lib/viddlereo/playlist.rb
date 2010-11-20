@@ -8,6 +8,8 @@ module Viddlereo
     element :name, String
     element :type, String
     element :visibility, String
+    has_many :videos, Viddlereo::Video
+
     #has_many :rules, Viddlereo::PlaylistRule
     
     param :users, Array
@@ -17,6 +19,7 @@ module Viddlereo
     param :min_views, Integer
     param :max_views, Integer
     param :sort, String
+
 
     def save
       new_record = self.class.parse(self.class.post(:method => "create", 
@@ -31,6 +34,17 @@ module Viddlereo
     def destroy
       self.class.post(:method => "delete", :playlist_id => self.id)   
       true
+    end
+
+    def self.find_by_id(playlist_id, options = {})
+      begin
+        parse(get(:method => :getDetails, 
+          :playlist_id => playlist_id,
+          :per_page => options[:per_page] || 100, 
+          :page => options[:page] || 1)).first
+      rescue RestClient::ResourceNotFound
+        nil
+      end
     end
   end
 end

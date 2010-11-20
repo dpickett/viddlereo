@@ -1,0 +1,307 @@
+--- 
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: http://api.viddler.com:80/api/v2/viddler.users.auth.xml?get_record_token=0&key=<%= key %>&password=<%= password %>&user=<%= user %>
+    body: 
+    headers: 
+      accept: 
+      - "*/*; q=0.5, application/xml"
+      accept-encoding: 
+      - gzip, deflate
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      x-viddler-node: 
+      - viddler_k
+      connection: 
+      - keep-alive
+      content-type: 
+      - text/xml;charset=UTF-8
+      server: 
+      - nginx/0.6.32
+      date: 
+      - Sat, 20 Nov 2010 22:03:39 GMT
+      content-encoding: 
+      - gzip
+      set-cookie: 
+      - JSESSIONID=4535BFAC0B54A1D9AF1D453952DA8A69.viddler_k; Domain=.viddler.com; Path=/
+      vary: 
+      - Accept-Encoding
+      transfer-encoding: 
+      - chunked
+    body: !binary |
+      H4sIAAAAAAAAA7Kxr8jNUShLLSrOzM+zVTLUM1BSSM1Lzk/JzEu3VQoNcdO1
+      ULK347JJLC3JsLMpTi0GqctMsTM3MTYyTDU0SjZLMjUwMzVIMTExSTJJNjE1
+      sTRJMTE0STU2SbXRR6i30QebAAAAAP//AwAReERtbwAAAA==
+
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :post
+    uri: http://api.viddler.com:80/api/v2/viddler.playlists.create.xml
+    body: type=smart&visibility=private&key=<%= key %>&sessionid=74321e12c6b50650d444b4c45494d414e34e&name=Some%20Playlist
+    headers: 
+      accept: 
+      - "*/*; q=0.5, application/xml"
+      content-type: 
+      - application/x-www-form-urlencoded
+      accept-encoding: 
+      - gzip, deflate
+      content-length: 
+      - "122"
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      x-viddler-node: 
+      - viddler_i
+      connection: 
+      - keep-alive
+      content-type: 
+      - text/xml;charset=UTF-8
+      server: 
+      - nginx/0.6.32
+      date: 
+      - Sat, 20 Nov 2010 22:03:39 GMT
+      content-encoding: 
+      - gzip
+      set-cookie: 
+      - JSESSIONID=FCB21D97338297D12F42C0F6165805A0.viddler_i; Domain=.viddler.com; Path=/
+      vary: 
+      - Accept-Encoding
+      transfer-encoding: 
+      - chunked
+    body: !binary |
+      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
+
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: http://api.viddler.com:80/api/v2/viddler.playlists.getDetails.xml?key=<%= key %>&page=1&per_page=100&playlist_id=7180076f7414e6e9&sessionid=74321e12c6b50650d444b4c45494d414e34e
+    body: 
+    headers: 
+      accept: 
+      - "*/*; q=0.5, application/xml"
+      accept-encoding: 
+      - gzip, deflate
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      x-viddler-node: 
+      - viddler_i
+      connection: 
+      - keep-alive
+      content-type: 
+      - text/xml;charset=UTF-8
+      server: 
+      - nginx/0.6.32
+      date: 
+      - Sat, 20 Nov 2010 22:03:40 GMT
+      content-encoding: 
+      - gzip
+      set-cookie: 
+      - JSESSIONID=28CCEB45B8E9469BE6083ACC5BEEE8AE.viddler_i; Domain=.viddler.com; Path=/
+      vary: 
+      - Accept-Encoding
+      transfer-encoding: 
+      - chunked
+    body: !binary |
+      H4sIAAAAAAAAA+ydWZPbOJLH3/dTKPq9LWTi3lCrwzO9vZ4e967D5dl5rKB4
+      uLjWFTrK7f30C6pElWiSPYwCDIGko4+SKJWKyCTxUwKZ/5z9/MdqOXlMd/t8
+      s/7pB3hFfpik63iT5OuPP/3wjw+//qh++Hn+b7Nlvj/c79L9cXmYz7bRx3QO
+      s+np52yb7u6fjhBijpXPZttl9KX4tfksT+YSFCFSZJIBS0WqZ1NzcLaOVun8
+      brNKJ+/Ob55NT8dmhy/bdL5fRTtz5PR49pjv80W+zA9f5ttd/hgd0tn06tjs
+      uE938+TTMs1X0Xo2PT2d7Y7LdP/02v6rF/f/+iOn51+fPg/lMU/Szf3V49Po
+      tOZJAln0NKr9IToc9/NdGiVfZtPzs1l0PDxsrs/wfGB2yA/LdP5+8u4h2qeT
+      f+7MZ0+idTJ5Y/5nBn96dbZM1x8PD3PkfDY9P54l6T7e5duD8Zw5x8oz4wBz
+      kqvcnOX06vFxt5w/HA7bf59OP3/+/MoMIFmmu1fxZjVN/9guN7t0Wp7f9DS6
+      /ZSJqbGX+b3Z4eG4WqyjfHl/9TFxsv7x9MK+8mnP78X70jj3j/Dqf7cfZ9Pq
+      BxXXzypa5utPLzq159+ePRxWS37/5KH95riLjd2mTQcf8/Tzfbw5rg9zUnj8
+      8myWr7bmIi/uhefXa8dmR3M+UXJ/yM2VCqiU1oQK45jr47NVlKT32+NimceV
+      d3Jh7pzai7Msetzs8kNa/MXL45kZ/ipdH55PpnrgZLv8dG7mCtun8S49vMzH
+      P19++SfOQXDBpbl0Lx94MllxFT6my+d75enpkwXns3S1SJPW95xfPUQfP5qp
+      pfVtl9fPA/2z916/Jdl8XhfGb33z8xumFaNl+ekWL348TVTMTFQJT5hGnog0
+      +bNbOv3jMM+Wj2Zw5sHTlHWy6PSPH0+Hnyauz3li7laKxntPD2cPaf7x4TBH
+      Zg6dH8/2+f+ZS4RJqRhh5k8UT192v74yf/vnxyxPfqqP5eTLzvfJ+ae5Xssj
+      2TLaP8w3WWYu0tPDWb592KzT+bqY+54emkPGzE8HCnvnh+PamPh04OnhbLvb
+      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
+      AAAA//8DAKCNfTAaOAEA
+
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :post
+    uri: http://api.viddler.com:80/api/v2/viddler.playlists.delete.xml
+    body: key=<%= key %>&sessionid=74321e12c6b50650d444b4c45494d414e34e&playlist_id=7180076f7414e6e9
+    headers: 
+      accept: 
+      - "*/*; q=0.5, application/xml"
+      content-type: 
+      - application/x-www-form-urlencoded
+      accept-encoding: 
+      - gzip, deflate
+      content-length: 
+      - "100"
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      x-viddler-node: 
+      - viddler_i
+      connection: 
+      - keep-alive
+      content-type: 
+      - text/xml;charset=UTF-8
+      server: 
+      - nginx/0.6.32
+      date: 
+      - Sat, 20 Nov 2010 22:03:40 GMT
+      content-encoding: 
+      - gzip
+      set-cookie: 
+      - JSESSIONID=49F26CD4E05E4986C33846483BB8C7D5.viddler_i; Domain=.viddler.com; Path=/
+      vary: 
+      - Accept-Encoding
+      transfer-encoding: 
+      - chunked
+    body: !binary |
+      H4sIAAAAAAAAA9ySMU/DQAyFd35FlB2cE6UpkutuzEiFuboSU1ncXU7nS0T+
+      fUNa1KgMzDDZ77OfpScZN5/eFT0nlTasS3NXlQWHt7aRcFiXry9Pt6tyQzfo
+      RPMusXYuE0Z7YDIIU8XIaXci1Yi+BUZnhy+XXlpCaag2q/vqYfleL8yCl/yI
+      MEIM1jNtW8/F83kZYWKYh8ik3qaRTD32orIXJ3mgmKS3mRFmDDvlRM2HY/E2
+      IEwSU+dYTzO9GurvJ+Fsh0uUn6Hq/xjK/P1QMHtFmD/yEQAA//8DAJa2ZPP9
+      AgAA
+
+    http_version: "1.1"

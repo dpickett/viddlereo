@@ -15,5 +15,6 @@ module Viddlereo
     element :made_public_time, DateTime
     element :favorite, Boolean
     element :comment_count, Integer
+    element :embed_code, String
   end
 end
