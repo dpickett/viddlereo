@@ -1,0 +1,205 @@
+--- 
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: http://api.viddler.com:80/api/v2/viddler.users.auth.xml?get_record_token=0&key=<%= key %>&password=<%= password %>&user=<%= user %>
+    body: 
+    headers: 
+      accept: 
+      - "*/*; q=0.5, application/xml"
+      accept-encoding: 
+      - gzip, deflate
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      x-viddler-node: 
+      - viddler_k
+      connection: 
+      - keep-alive
+      content-type: 
+      - text/xml;charset=UTF-8
+      server: 
+      - nginx/0.6.32
+      date: 
+      - Sat, 20 Nov 2010 23:05:57 GMT
+      content-encoding: 
+      - gzip
+      set-cookie: 
+      - JSESSIONID=683A707156491795C33F73E63DA83BF2.viddler_k; Domain=.viddler.com; Path=/
+      vary: 
+      - Accept-Encoding
+      transfer-encoding: 
+      - chunked
+    body: !binary |
+      H4sIAAAAAAAAA7Kxr8jNUShLLSrOzM+zVTLUM1BSSM1Lzk/JzEu3VQoNcdO1
+      ULK347JJLC3JsLMpTi0GqctMsTNMMzM2TLMwNEo2S7KwNEtOSzUxMUkySTYx
+      NbE0STExNEk1Nky10UdosNEHGwEAAAD//wMAbzApRnAAAAA=
+
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :post
+    uri: http://api.viddler.com:80/api/v2/viddler.playlists.create.xml
+    body: type=smart&visibility=private&key=<%= key %>&name=Some%20Playlist&sessionid=1f631f812c6b896cfe444b4c45494d414e31e
+    headers: 
+      accept: 
+      - "*/*; q=0.5, application/xml"
+      content-type: 
+      - application/x-www-form-urlencoded
+      accept-encoding: 
+      - gzip, deflate
+      content-length: 
+      - "123"
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      x-viddler-node: 
+      - viddler_j
+      connection: 
+      - keep-alive
+      content-type: 
+      - text/xml;charset=UTF-8
+      server: 
+      - nginx/0.6.32
+      date: 
+      - Sat, 20 Nov 2010 23:05:57 GMT
+      content-encoding: 
+      - gzip
+      set-cookie: 
+      - JSESSIONID=511F7D67DC87FA8653C237CE70A781B4.viddler_j; Domain=.viddler.com; Path=/
+      vary: 
+      - Accept-Encoding
+      transfer-encoding: 
+      - chunked
+    body: !binary |
+      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
+
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: http://api.viddler.com:80/api/v2/viddler.playlists.getByUser.xml?key=<%= key %>&page=1&per_page=100&sessionid=1f631f812c6b896cfe444b4c45494d414e31e&user=<%= user %>
+    body: 
+    headers: 
+      accept: 
+      - "*/*; q=0.5, application/xml"
+      accept-encoding: 
+      - gzip, deflate
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      x-viddler-node: 
+      - viddler_k
+      connection: 
+      - keep-alive
+      content-type: 
+      - text/xml;charset=UTF-8
+      server: 
+      - nginx/0.6.32
+      date: 
+      - Sat, 20 Nov 2010 23:05:57 GMT
+      content-encoding: 
+      - gzip
+      set-cookie: 
+      - JSESSIONID=ECEA36E8D4965302B1FDE1F7FFF3E4C0.viddler_k; Domain=.viddler.com; Path=/
+      vary: 
+      - Accept-Encoding
+      transfer-encoding: 
+      - chunked
+    body: !binary |
+      H4sIAAAAAAAAA9yTTU/DMAyG7/yKqndwI8Y6JM+7cZ4EnKdAzWSRpFGcVuu/
+      p3RDq+DAvSe/fvwhvbKMu5N3Rc9JpQ3b0txVZcHhvW0kHLfl68vT7abc0Q06
+      0XxIrJ3LhNEemQzCFDFyOpxJVY3sJ8Po7PA9pldJKA3VZnNfPaw/6pVZ8Zof
+      EUaIwXqm59Zzsb80I0wM8xCZ1Ns0kkljLypv4iQPFJP0NjPCjGGnnKj5dCze
+      BoQpxdQ51nNNfxX1/5VwGYerlb+m6iWaMsszZZZwKZj9F8zf8wsAAP//AwCP
+      yqgq0wMAAA==
+
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :post
+    uri: http://api.viddler.com:80/api/v2/viddler.playlists.delete.xml
+    body: key=<%= key %>&playlist_id=7181076f7414e6e9&sessionid=1f631f812c6b896cfe444b4c45494d414e31e
+    headers: 
+      accept: 
+      - "*/*; q=0.5, application/xml"
+      content-type: 
+      - application/x-www-form-urlencoded
+      accept-encoding: 
+      - gzip, deflate
+      content-length: 
+      - "101"
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      x-viddler-node: 
+      - viddler_j
+      connection: 
+      - keep-alive
+      content-type: 
+      - text/xml;charset=UTF-8
+      server: 
+      - nginx/0.6.32
+      date: 
+      - Sat, 20 Nov 2010 23:05:58 GMT
+      content-encoding: 
+      - gzip
+      set-cookie: 
+      - JSESSIONID=8D1DEEB550BE43510E6695AD159B5520.viddler_j; Domain=.viddler.com; Path=/
+      vary: 
+      - Accept-Encoding
+      transfer-encoding: 
+      - chunked
+    body: !binary |
+      H4sIAAAAAAAAA9ySMU/DQAyFd35FlB2cE6UpkutuzEiFuboSU1ncXU7nS0T+
+      fUNa1KgMzDDZ77OfpScZN5/eFT0nlTasS3NXlQWHt7aRcFiXry9Pt6tyQzfo
+      RPMusXYuE0Z7YDIIU8XIaXci1Yi+BUZnhy+XXlpCaag2q/vqYfleL8yCl/yI
+      MEIM1jNtW8/F83kZYWKYh8ik3qaRTD32orIXJ3mgmKS3mRFmDDvlRM2HY/E2
+      IEwSU+dYTzO9GurvJ+Fsh0uUn6Hq/xjK/P1QMHtFmD/yEQAA//8DAJa2ZPP9
+      AgAA
+
+    http_version: "1.1"

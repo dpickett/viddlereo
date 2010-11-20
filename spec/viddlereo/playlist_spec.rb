@@ -70,4 +70,21 @@ describe Viddlereo::Playlist do
       list.name.should eql(subject.name)
     end
   end
+  
+  context "fetching by user" do
+    use_vcr_cassette :record => :new_episodes
+    subject { playlist }
+    
+    before do
+      subject.save.should be_true
+    end
+
+    after do
+      subject.destroy.should be_true
+    end
+    
+    it "returns the playlist for the logged in user" do
+      Viddlereo::Playlist.find_by_user(Viddlereo.configuration.user).collect{|i| i.id}.should include(subject.id)
+    end
+  end
 end

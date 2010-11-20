@@ -46,5 +46,16 @@ module Viddlereo
         nil
       end
     end
+    
+    def self.find_by_user(user, options = {})
+      begin
+        parse(get(:method => :getByUser, 
+          :user => user,
+          :per_page => options[:per_page] || 100, 
+          :page => options[:page] || 1))
+      rescue RestClient::ResourceNotFound
+        []
+      end
+    end
   end
 end
