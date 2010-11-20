@@ -64,5 +64,10 @@ describe Viddlereo::Playlist do
       list = Viddlereo::Playlist.find_by_id(subject.id)
       list.videos.should be_kind_of(Array)
     end
+
+    it "should return the intended video" do
+      list = Viddlereo::Playlist.find_by_id(subject.id)
+      list.name.should eql(subject.name)
+    end
   end
 end
