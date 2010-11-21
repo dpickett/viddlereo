@@ -38,10 +38,13 @@ module Viddlereo
 
     def self.find_by_id(playlist_id, options = {})
       begin
-        parse(get(:method => :getDetails, 
+        response = get(:method => :getDetails, 
           :playlist_id => playlist_id,
           :per_page => options[:per_page] || 100, 
-          :page => options[:page] || 1)).first
+          :page => options[:page] || 1)
+        playlist = parse(response).first
+        playlist.videos = Viddlereo::Video.parse(response) if playlist
+        playlist
       rescue RestClient::ResourceNotFound
         nil
       end
@@ -49,10 +52,11 @@ module Viddlereo
     
     def self.find_by_user(user, options = {})
       begin
-        parse(get(:method => :getByUser, 
+        response = get(:method => :getByUser, 
           :user => user,
           :per_page => options[:per_page] || 100, 
-          :page => options[:page] || 1))
+          :page => options[:page] || 1)
+        parse(response)
       rescue RestClient::ResourceNotFound
         []
       end
