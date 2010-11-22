@@ -41,6 +41,7 @@ module Viddlereo
         response = get(:method => :getDetails, 
           :playlist_id => playlist_id,
           :per_page => options[:per_page] || 100, 
+          :add_embed_code => options[:add_embed_code] || 1,
           :page => options[:page] || 1)
         playlist = parse(response).first
         playlist.videos = Viddlereo::Video.parse(response) if playlist
