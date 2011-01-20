@@ -1,0 +1,80 @@
+--- 
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: http://api.viddler.com:80/api/v2/viddler.users.auth.xml?get_record_token=0&key=<%= key %>&password=<%= password %>&user=<%= user %>
+    body: 
+    headers: 
+      accept: 
+      - "*/*; q=0.5, application/xml"
+      accept-encoding: 
+      - gzip, deflate
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      x-viddler-node: 
+      - viddler_i
+      connection: 
+      - keep-alive
+      content-type: 
+      - text/xml;charset=UTF-8
+      server: 
+      - nginx/0.6.32
+      date: 
+      - Wed, 19 Jan 2011 23:19:32 GMT
+      content-encoding: 
+      - gzip
+      set-cookie: 
+      - JSESSIONID=F0A1FA7E04043F6BE491B7D7B1ECB1B9.viddler_i; Domain=.viddler.com; Path=/
+      vary: 
+      - Accept-Encoding
+      transfer-encoding: 
+      - chunked
+    body: !binary |
+      H4sIAAAAAAAAA7Kxr8jNUShLLSrOzM+zVTLUM1BSSM1Lzk/JzEu3VQoNcdO1
+      ULK347JJLC3JsLMpTi0GqctMsTM0SzY2NjQ3NEpJNLA0NktNMjUxMUkySTYx
+      NbE0STExNEk1NjCz0UdosNEHGwEAAAD//wMANZpXdnAAAAA=
+
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: http://api.viddler.com:80/api/v2/viddler.videos.prepare_upload.xml?key=<%= key %>&sessionid=16c331712da0936eb5444b4c45494d414e306
+    body: 
+    headers: 
+      accept: 
+      - "*/*; q=0.5, application/xml"
+      accept-encoding: 
+      - gzip, deflate
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      x-viddler-node: 
+      - viddler_j
+      connection: 
+      - keep-alive
+      content-type: 
+      - text/xml;charset=UTF-8
+      server: 
+      - nginx/0.6.32
+      date: 
+      - Wed, 19 Jan 2011 23:19:33 GMT
+      content-encoding: 
+      - gzip
+      set-cookie: 
+      - JSESSIONID=B892999055946FA82EFB967CAF26285B.viddler_j; Domain=.viddler.com; Path=/
+      vary: 
+      - Accept-Encoding
+      transfer-encoding: 
+      - chunked
+    body: !binary |
+      H4sIAAAAAAAAA1SNTQ6CMBSE956CdG9/EKSaUnaeQNemvD6wEVoChXh8SSAm
+      rmYyX2ZGVZ++SxYcJxd8SQTlJEEPwTrfluRxvx0lqfRBzUMXjNUKvR2C81G/
+      YhyujG35xOnirO1wpBB6tvvnBtmfrAwDXU8V+22pGN7o9QxFY9OzBaxNI/PM
+      FAZyaVDIFHhWA+DlJARvMsW2gto39RcAAP//AwDMdrShxgAAAA==
+
+    http_version: "1.1"

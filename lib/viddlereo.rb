@@ -55,5 +55,6 @@ require 'viddlereo/resource'
 
 require 'viddlereo/echo'
 require 'viddlereo/session'
+require 'viddlereo/upload'
 require 'viddlereo/video'
 require 'viddlereo/playlist'

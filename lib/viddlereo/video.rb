@@ -33,5 +33,9 @@ module Viddlereo
         :embed_code => options[:embed_code] || 3)
       self.embed_code = self.class.parse(response).embed_code
     end
+    
+    def self.prepare_upload
+      Viddlereo::Upload.prepare
+    end
   end
 end
