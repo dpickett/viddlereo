@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{viddlereo}
-  s.version = "0.1.3"
+  s.version = "0.1.4"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Dan Pickett"]
-  s.date = %q{2010-11-21}
+  s.date = %q{2011-01-21}
   s.description = %q{Viddler + Ruby = Great Video Success}
   s.email = %q{dpickett@enlightsolutions.com}
   s.extra_rdoc_files = [
@@ -33,10 +33,13 @@ Gem::Specification.new do |s|
     "lib/viddlereo/playlist.rb",
     "lib/viddlereo/resource.rb",
     "lib/viddlereo/session.rb",
+    "lib/viddlereo/upload.rb",
     "lib/viddlereo/video.rb",
     "spec/cassettes/Viddlereo_Playlist/creating.yml",
     "spec/cassettes/Viddlereo_Playlist/fetching.yml",
     "spec/cassettes/Viddlereo_Playlist/fetching_by_user.yml",
+    "spec/cassettes/Viddlereo_Upload/preparing.yml",
+    "spec/cassettes/Viddlereo_Video.yml",
     "spec/cassettes/echo/message.yml",
     "spec/cassettes/session/get_key.yml",
     "spec/spec_helper.rb",
@@ -45,6 +48,7 @@ Gem::Specification.new do |s|
     "spec/viddlereo/playlist_spec.rb",
     "spec/viddlereo/resource_spec.rb",
     "spec/viddlereo/session_spec.rb",
+    "spec/viddlereo/upload_spec.rb",
     "spec/viddlereo/video_spec.rb",
     "spec/viddlereo_spec.rb",
     "viddlereo.gemspec"
@@ -60,6 +64,7 @@ Gem::Specification.new do |s|
     "spec/viddlereo/playlist_spec.rb",
     "spec/viddlereo/resource_spec.rb",
     "spec/viddlereo/session_spec.rb",
+    "spec/viddlereo/upload_spec.rb",
     "spec/viddlereo/video_spec.rb",
     "spec/viddlereo_spec.rb"
   ]
