@@ -23,8 +23,14 @@ module Viddlereo
     def self.find_by_id(identifier, options = {})
       response = get(:method => :getDetails, 
         :video_id => identifier,
-        :add_embed_code => options[:add_embed_code] || 1)
+        :add_embed_code => options[:add_embed_code] || 3)
       video = parse(response)
+    end
+    
+    def update_attributes(options = {})
+      response = self.class.post({
+        :method => :setDetails,
+        :video_id => self.id}.merge(options))
     end
     
     def get_embed_code(options = {})
